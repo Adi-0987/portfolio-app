@@ -1,0 +1,151 @@
+.container{
+    width: fit-content;
+    height: 100px;
+    padding-top: 10px;
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+.links svg{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 30px;
+    fill: #00768D;
+    transition: fill 0.3s ease;
+    justify-content: space-around;
+}
+.links:hover svg{
+    fill: #00AFD1;
+}
+.pic-container {
+    position: relative;
+    width: 70%; /* Set the width of the container */
+    max-width: 680px; /* Set a maximum width */
+    height: 500px; /* Adjust the height based on content */
+    top: 10%;
+    left: -5%;
+}
+.mypic {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    top: 15%; /* Adjust the top value as needed */
+    max-width: 100%; /* Make the image responsive */
+}
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    position: relative;
+    bottom: 505px;
+    left: 42%;
+
+    /* Adjust other styling properties as needed */
+}
+.button{
+    border-radius: 48px;
+    background-color: #004363;
+    border: none;
+    color: white;
+    padding: 25px 46px;
+    text-align: center;
+    font-family: arial;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    width: 30%;
+}
+.button:hover{
+    background-color: #00768D;
+}
+.default-focus {
+    background-color: #00768D;
+}
+.aboutme-container{
+    position: relative;
+    bottom: 525px;
+    left: 43.5%;
+}
+.about-text{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 60px;
+    color: #ffffff;
+    position: relative;
+}
+.me-text{
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 60px;
+    color: #E10081;
+    position: relative;
+}
+.text-container{
+    position: relative;
+    bottom: 475px;
+    left: 42%;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2%;
+}
+  
+li {
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+
+}
+li svg {
+    height: 40px;
+    width: auto;
+    fill: #00AFD1;
+    margin-right: 10px; /* Adjust the margin as needed */
+    vertical-align: middle; /* Align the text vertically with the SVG icon */
+  }
+.warp{
+    word-wrap: break-word;
+}
+
+section {
+    padding: 0;
+    margin: 2%;
+    columns: 2;
+    display: inline-block;
+    column-rule: 20px;
+}
+section h2{
+    font-family: arial;
+    font-weight: bold;
+    margin: 2px;
+    font-size: 20px;
+}  
+section h3{
+    font-family: arial;
+    font-weight: normal;
+    margin: 2px;
+    font-size: 16px;
+}
+section h4{
+    font-family: arial;
+    font-weight: normal;
+    font-style: italic;
+    margin: 2px;
+}
+div svg {
+    height: 40px;
+    width: auto;
+    fill: #00AFD1;
+    margin-right: 10px; /* Adjust the margin as needed */
+    vertical-align: middle; /* Align the text vertically with the SVG icon */
+  }
+.interests-list {
+    columns: 3;
+    display: inline-block;
+}
