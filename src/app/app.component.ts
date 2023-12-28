@@ -1,4 +1,5 @@
 import { Component,HostListener } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +9,14 @@ import { Component,HostListener } from '@angular/core';
 export class AppComponent {
   title = 'portfolio-app';
   private scrolledPercentage: number = 0;
+ activeSection: string = '';
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
-    const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    const bodyHeight = document.body.clientHeight;
-
-    this.scrolledPercentage = (scrollPosition / (bodyHeight - windowHeight)) * 100;
+    const{scrollTop, scrollHeight} = document.documentElement
+    const scrollPercentage = scrollTop / (scrollHeight - window.innerHeight) * 100 + '%'
+    const progressBar = document.querySelector('#progress-bar') as HTMLElement | null;
+    progressBar?.style.setProperty('--progress', scrollPercentage);
   }
-
-  getProgressBarWidth(): string {
-    return this.scrolledPercentage + '%';
-  }
+  
 }

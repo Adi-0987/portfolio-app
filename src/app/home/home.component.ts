@@ -7,8 +7,6 @@ import {BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private BreakpointObserver: BreakpointObserver) {}
   ngOnInit(): void {
   }
   openResume() {
@@ -17,5 +15,15 @@ export class HomeComponent implements OnInit {
 
     // Open the PDF in a new tab
     window.open(pdfUrl, '_blank');
+  }
+  scrollToContact() {
+    // You can adjust the offset as needed
+    const contactOffset = 4500;
+
+    // Use smooth scrolling to scroll to the contact section
+    window.scrollTo({
+      top: contactOffset,
+      behavior: 'smooth'
+    });
   }
 }
